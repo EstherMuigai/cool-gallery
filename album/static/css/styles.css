@@ -4,16 +4,26 @@ body {
 
 .nav-pills>li>a{
   background:none;
-  color: black;
+  color: white;
+  font-size:20px;
 }
 
 .nav-pills>li>a:hover {
     background:none;
-    color:#e82020;
+    color:purple;
 }
 
 .nav {
-  padding-top: 10px;
+  padding-top: 2px;
+  margin-bottom:0;
+  background-image: linear-gradient(to right, pink , purple,pink );
+  color: white;
+  background-color: rgb(0,0,0,0.5);
+}
+
+#imgdisplay {
+  background-image: url('https://biblicalcounseling.com/wp-content/uploads/2018/11/abstract-background-black-and-white-935871.jpg');
+  top:0;
 }
 
 #categories {
@@ -37,23 +47,44 @@ body {
 
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: solid #95C623; /* The typwriter cursor */
+  border-right: solid #aa4684; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto;
-  width:55%;
-  animation: typing 15s steps(18, end),     blink-caret .75s step-end infinite;
+  width:100%;
+  animation: typing 24s steps(18, end),     blink-caret .75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 55% }
+  to { width: 100% }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #95C623; }
+  50% { border-color: #aa4684; }
+}
+
+.blink_me {
+  animation: blinker 3s linear infinite;
+  color: pink;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink_us {
+  animation: blinker 5s linear infinite;
+  color: pink;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 #landing {
@@ -63,4 +94,5 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
   

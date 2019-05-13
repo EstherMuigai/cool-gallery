@@ -4,7 +4,8 @@ from .models import Image,Category,Location
 
 # Create your views here.
 def welcome(request):
-    return render(request, 'landingpage.html')
+    categories = Category.objects.all()
+    return render(request, 'landingpage.html',{"categories":categories})
 
 def categories(request):
     categories = Category.objects.all()

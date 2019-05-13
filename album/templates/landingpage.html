@@ -7,8 +7,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body id="landing">
-    <div style="font-family: 'Righteous', cursive; border-right: 1px solid; font-size:50px; float:right;margin-top:400px;">
-            Capture every moment.</div>
+    <div class="container-fluid">
+        {% for category in categories %}
+            <h1 class="blink_me">{{category.name}}</h1>
+        {% endfor %}
+        <div class="row" style="float:right;">
+            {% for category in categories %}
+                <h3 class="blink_me">{{category.name}}</h3>
+            {% endfor %}
+        </div>
+        <div class="row" style="float:left;margin-top:100px;">
+                {% for category in categories %}
+                <h3 class="blink_us">{{category.name}}</h3>
+            {% endfor %}
+        </div>
+        <div class="row" style="margin-left:100px;margin-top:10px;">
+                {% for category in categories %}
+                <h3 class="blink_me">{{category.name}}</h3>
+            {% endfor %}
+        </div>
+        <div class="row" style="margin-left:400px;margin-top:10px;">
+                {% for category in categories %}
+                <h3 class="blink_us">{{category.name}}</h3>
+            {% endfor %}
+        </div>
+        <div class="row" style="margin-left:700px;margin-top:1%;">
+                {% for category in categories %}
+                <h3 class="blink_us">{{category.name}}</h3>
+            {% endfor %}
+        </div>
+        <div class="row" style="margin-left:400px;margin-top:2%;">
+                {% for category in categories %}
+                <h3 class="blink_us">{{category.name}}</h3>
+            {% endfor %}
+        </div>
+        <div class="row" style="margin-left:300px;margin-top:2%;">
+                {% for category in categories %}
+                <h3 class="blink_us">{{category.name}}</h3>
+            {% endfor %}
+        </div>
+        <div class="row" style="margin-left:200px;margin-top:4%">
+                {% for category in categories %}
+                <h3 class="blink_us">{{category.name}}</h3>
+            {% endfor %}
+        </div>
+        <div class="row" style="float:right;margin-top:1%;right:0;font-size:50px;color: #aa4684;">
+                    <div class="typewriter">Capture every moment.</div>
+        </div>
+    </div>
 </body>
 </html>
 {% endblock %}

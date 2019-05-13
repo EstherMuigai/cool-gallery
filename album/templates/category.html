@@ -2,46 +2,48 @@
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-        <div class="container-fluid">
-            <div class="row">
-                {% if category %}
-                    <h2 style="margin:1%;margin-left:5%;">Found category <span style="color:#e82020;">{{message}}</span></h2>
-                    <div class="container-fluid">
-                        <div class="row">
-                            {% for image in images %}
-                            {% if message == image.category.name %}
-                            <div class="col-sm-6 col-md-4 col-xs-3" style="margin:1%;">
-                                    <img src="{{image.image.url}}" class="img-fluid" id="gallery" class="btn" data-target="#{{image.name}}" data-toggle="modal">
-                            </div>
-                            {% endif %}
-                            <div class="modal fade" id="{{image.name}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-body">
-                                            <div class="row">
-                                                <img src="{{image.image.url}}" class="img-fluid" id="modal">
-                                            </div>
-                                            <div class="row" style="position:fixed;">
-                                                <h5>name: {{image.name}}</h5><br>
-                                                <h5>description: {{image.description}}</h5><br>
-                                                <h5>category: {{image.category.name}}</h5><br>
-                                                <h5>uploaded: {{image.upload_date}}</h5><br>
-                                            </div>
-                                        </div> 
+    <div class="container-fluid" id="imgdisplay">
+        <div class="row">
+            {% if category %}
+            <h1 style="margin:1%;margin-left:30%;">Found category <span style="color:purple">{{message}}</span></h1>
+            <div class="container-fluid">
+                <div class="row">
+                    {% for image in images %}
+                    {% if message == image.category.name %}
+                    <div class="col-sm-2 col-md-4">
+
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-xs-3" style="margin:1%;">
+                        <img src="{{image.image.url}}" class="img-fluid" id="gallery" class="btn"
+                            data-target="#{{image.name}}" data-toggle="modal">
+                    </div>
+                    {% endif %}
+                    <div class="modal fade" id="{{image.name}}" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <img src="{{image.image.url}}" class="img-fluid" id="modal">
                                 </div>
                             </div>
-                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
-                </div>
-                {% else %}
-                    <h2> Found 0 images for the category {{message}}</h2>
-                {% endif %}
             </div>
+            {% else %}
+            <h2> Found 0 images for the category {{message}}</h2>
+            {% endif %}
         </div>
+    </div>
 </body>
+
 </html>
 {% endblock %}
