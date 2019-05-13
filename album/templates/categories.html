@@ -7,19 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div>
-        <div class="container-fluid" >
+        <div class="container">
             {% for category in categories %}
             {% for image in images %}
             {% if category.name == image.category.name %}
             <div class="container-fluid">
                     <div class="row" id="categories">
                             <div class="col-sm-2 col-md-2 col-xs-2" id="cat_title">
-                                <h3>{{category.name}}</h3>
+                                <h2 style="margin-top:50%;">{{category.name}}</h2>
                             </div>
-                            <div class="col-sm-2 col-md-2 col-xs-2">
-                                    <img src="{{image.image.url}}" class="img-fluid" id="gallery" class="btn"
-                                    data-target="#{{image.name}}" data-toggle="modal">
+                            <div class="col-sm-2 col-md-2 col-xs-2" id="polaroid2">
+                                    <img src="{{image.image.url}}" class="img-fluid" class="btn"
+                                    data-target="#{{image.name}}" data-toggle="modal" id="menu">
+                                    <h3 style="text-align: center;padding-top:5%;">{{image.name}}</h3>
                             </div>
                     </div>
             </div>

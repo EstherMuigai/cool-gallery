@@ -27,7 +27,12 @@
                         <a class="nav-link" href="/categories">Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/location">Location</a>
+                        <div class="dropdown">
+                            <a class="nav-link" href="/location" data-toggle="dropdown" style="color:white;font-size:20px;background:none;">Locations</a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Link 1</a>
+                                </div>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <form class="navbar-form" role="search" action="{% url 'category_results' %}">

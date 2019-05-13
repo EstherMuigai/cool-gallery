@@ -10,7 +10,7 @@ body {
 
 .nav-pills>li>a:hover {
     background:none;
-    color:purple;
+    color:white;
 }
 
 .nav {
@@ -21,8 +21,30 @@ body {
   background-color: rgb(0,0,0,0.5);
 }
 
-#imgdisplay {
-  background-image: url('https://d39l2hkdp2esp1.cloudfront.net/img/photo/108949/108949_00_2x.jpg?20160729191020');
+a:hover {
+  color:purple;
+}
+
+#polaroid {
+  margin:1%;
+  background-color: white;
+  border:solid 1px grey;
+  padding-left:1%;
+  padding-right:1%;
+  padding-top:1%;
+  padding-bottom:5%;
+  height:460px;
+}
+
+#polaroid2 {
+  margin:1%;
+  background-color: white;
+  border:solid 1px grey;
+  padding-left:1%;
+  padding-right:1%;
+  padding-top:1%;
+  padding-bottom:5%;
+  
 }
 
 #categories {
@@ -30,13 +52,15 @@ body {
 }
 
 #menu {
+  border:solid 1px grey;
   height:200px;
   width: 200px;
 }
 
 #gallery {
+  border:solid 1px grey;
   height:400px;
-  width: 300px;
+  width: 360px;
 }
 
 #modal {
