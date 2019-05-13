@@ -9,16 +9,16 @@
 </head>
 
 <body>
-    <div class="container-fluid" id="imgdisplay">
+    <div class="container" id="imgdisplay">
         <div class="row">
             {% if category %}
-            <h1 style="margin:1%;margin-left:30%;">Found category <span style="color:purple">{{message}}</span></h1>
+            <h1 style="margin:1%;margin-left:35%;">Found category <span style="color:purple">{{message}}</span></h1>
             <div class="container-fluid">
                 <div class="row">
                     {% for image in images %}
                     {% if message == image.category.name %}
                     <div class="col-sm-2 col-md-4">
-
+                        <h2 style="text-align:center; margin-top:50%;">{{image.name}}</h2>
                     </div>
                     <div class="col-sm-6 col-md-4 col-xs-3" style="margin:1%;">
                         <img src="{{image.image.url}}" class="img-fluid" id="gallery" class="btn"
@@ -30,7 +30,17 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-body">
                                 <div class="row">
-                                    <img src="{{image.image.url}}" class="img-fluid" id="modal">
+                                    <div class="col-sm-6 col-md-7">
+                                        <img src="{{image.image.url}}" class="img-fluid" id="modal">
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                            <ul style="list-style-type:none; color:white;">
+                                                <li>name: {{image.name}}</li>
+                                                <li>description: {{image.description}}</li>
+                                                <li>category: {{image.category.name}}</li>
+                                                <li>uploaded: {{image.upload_date}}</li>
+                                            </ul>
+                                </div>
                                 </div>
                             </div>
                         </div>

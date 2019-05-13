@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-        <div class="container-fluid">
+        <div class="container-fluid" >
             {% for category in categories %}
             {% for image in images %}
             {% if category.name == image.category.name %}
@@ -18,11 +18,32 @@
                                 <h3>{{category.name}}</h3>
                             </div>
                             <div class="col-sm-2 col-md-2 col-xs-2">
-                                    <img src="{{image.image.url}}" class="img-fluid">
+                                    <img src="{{image.image.url}}" class="img-fluid" id="gallery" class="btn"
+                                    data-target="#{{image.name}}" data-toggle="modal">
                             </div>
                     </div>
             </div>
             {% endif %}
+            <div class="modal fade" id="{{image.name}}" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-7">
+                                        <img src="{{image.image.url}}" class="img-fluid" id="modal">
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                            <ul style="list-style-type:none; color:white;">
+                                                <li>name: {{image.name}}</li>
+                                                <li>description: {{image.description}}</li>
+                                                <li>category: {{image.category.name}}</li>
+                                                <li>uploaded: {{image.upload_date}}</li>
+                                            </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         {% endfor %}
         {% endfor %}
     </div>

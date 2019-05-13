@@ -22,8 +22,7 @@ body {
 }
 
 #imgdisplay {
-  background-image: url('https://biblicalcounseling.com/wp-content/uploads/2018/11/abstract-background-black-and-white-935871.jpg');
-  top:0;
+  background-image: url('https://d39l2hkdp2esp1.cloudfront.net/img/photo/108949/108949_00_2x.jpg?20160729191020');
 }
 
 #categories {
@@ -41,8 +40,8 @@ body {
 }
 
 #modal {
-  height:400px;
-  width: 300px;
+  height:500px;
+  width: 400px;
 }
 
 .typewriter {
