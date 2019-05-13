@@ -11,8 +11,8 @@ class Category(models.Model):
 
     @classmethod
     def search_by_category(cls,search_term):
-        images = cls.objects.filter(name__icontains=search_term)
-        return images
+        category = cls.objects.filter(name__icontains=search_term)
+        return category
 
     def __str__(self):
         return self.name
