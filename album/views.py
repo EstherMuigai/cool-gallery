@@ -27,9 +27,9 @@ def category(request):
         message = "Invalid."
         return render(request, 'landingpage.html',{"message":message,"locations":locations})
 
-def location(request):
+def location(request,id):
     locations = Location.objects.all()
-    images = Image.objects.all()
-    return render(request, 'location.html', {"locations":locations,"images":images})
+    images = Image.objects.filter(location__id=id)
+    return render(request, 'location.html', {"images":images,"locations":locations})
 
 

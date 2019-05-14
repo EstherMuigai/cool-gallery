@@ -8,11 +8,6 @@ class Location(models.Model):
     def delete_location(self):
         self.delete()
 
-    @classmethod
-    def filter_by_location(cls,search_term):
-        images = cls.objects.filter(name__icontains=search_term)
-        return images
-
     def __str__(self):
         return self.name
 

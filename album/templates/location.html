@@ -9,41 +9,35 @@
 </head>
 
 <body>
-            <div class="container">
-                    {% for location in locations %}
+    <div class="container">
+        {% for image in images %}
+        <div class="col-sm-6 col-md-3 col-xs-3" id="polaroid2">
+            <img src="{{image.image.url}}" class="img-fluid" id="menu" class="btn" data-target="#{{image.id}}"
+                data-toggle="modal">
+            <h2 style="text-align:center;">{{image.name}}</h2>
+        </div>
+        <div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-body">
                     <div class="row">
-                    {% for image in images %}
-                    {% if location.name == image.location.name %}
-                    <div class="col-sm-6 col-md-3 col-xs-3" id="polaroid">
-                        <img src="{{image.image.url}}" class="img-fluid" id="gallery" class="btn"
-                            data-target="#{{image.name}}" data-toggle="modal">
-                        <h2 style="text-align:center;">{{image.name}}</h2>
-                    </div>
-                    <div class="modal fade" id="{{image.name}}" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-sm-6 col-md-7">
-                                        <img src="{{image.image.url}}" class="img-fluid" id="modal">
-                                    </div>
-                                    <div class="col-sm-6 col-md-4">
-                                            <ul style="list-style-type:none; color:white;">
-                                                <li>name: {{image.name}}</li>
-                                                <li>description: {{image.description}}</li>
-                                                <li>category: {{image.category.name}}</li>
-                                                <li>uploaded: {{image.upload_date}}</li>
-                                            </ul>
-                                </div>
-                                </div>
-                            </div>
+                        <div class="col-sm-6 col-md-7">
+                            <img src="{{image.image.url}}" class="img-fluid" id="modal">
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <ul style="list-style-type:none; color:white;">
+                                <li>name: {{image.name}}</li>
+                                <li>description: {{image.description}}</li>
+                                <li>location: {{image.location.name}}</li>
+                                <li>category: {{image.category.name}}</li>
+                                <li>uploaded: {{image.upload_date}}</li>
+                            </ul>
                         </div>
                     </div>
-                    {% endif %}
-                    {% endfor %}
-                    {% endfor %}
-                    </div>
+                </div>
+            </div>
         </div>
+        {% endfor %}
     </div>
 </body>
 
