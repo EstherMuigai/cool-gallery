@@ -5,12 +5,16 @@ body {
 .nav-pills>li>a{
   background:none;
   color: white;
-  font-size:20px;
+  font-size:30px;
 }
 
 .nav-pills>li>a:hover {
     background:none;
     color:white;
+}
+
+#description{
+  margin-top:100px;
 }
 
 .nav {
@@ -21,13 +25,17 @@ body {
   background-color: rgb(0,0,0,0.5);
 }
 
+a {
+  font-size: 30px;
+}
+
 a:hover {
   color:purple;
 }
 
 #polaroid {
   margin:1%;
-  background-color: white;
+  background-color: #f2f4f7;
   border:solid 1px grey;
   padding-left:1%;
   padding-right:1%;
@@ -38,29 +46,39 @@ a:hover {
 
 #polaroid2 {
   margin:1%;
-  background-color: white;
+  background-color: #f2f4f7;
   border:solid 1px grey;
   padding-left:1%;
   padding-right:1%;
   padding-top:1%;
   padding-bottom:5%;
-  
+  height:260px;
 }
 
 #categories {
-  margin-top: 100px;
+  margin-top: 1%;
 }
 
 #menu {
   border:solid 1px grey;
   height:200px;
-  width: 200px;
+  width: 260px;
+}
+
+.overlay {
+  background-color: rgb(0,0,0,0.5);
 }
 
 #gallery {
   border:solid 1px grey;
   height:400px;
   width: 360px;
+}
+
+.rotate45 {
+  transform: translate(-75%, 100%) rotate(45deg);
+  -ms-transform: translate(-75%, 100%) rotate(45deg);
+  -webkit-transform: translate(-75%, 100%) rotate(45deg);
 }
 
 #modal {

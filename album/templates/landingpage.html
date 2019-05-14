@@ -8,51 +8,94 @@
 </head>
 <body id="landing">
     <div class="container-fluid">
-        {% for category in categories %}
-            <h1 class="blink_me">{{category.name}}</h1>
-        {% endfor %}
-        <div class="row" style="float:right;">
-            {% for category in categories %}
-                <h3 class="blink_me">{{category.name}}</h3>
-            {% endfor %}
-        </div>
-        <div class="row" style="float:left;margin-top:100px;">
+        <div class="row">
+            <div class="col-sm-3 col-md-4">
+                    <div class = "row">
+                            <div class="col-sm-3 col-md-6" id="polaroid2">
+                                <img src="https://bambiniphoto.sg/wp-content/uploads/family-photography-bambini-025.jpg" 
+                                class="img-fluid" id="menu">
+                                <h4 style="text-align: center;padding-top:2%;">My perfect family</h4>
+                            </div>
+                            <div class="col-sm-3 col-md-6" id="polaroid2">
+                                <img src="http://www.timespub.com/wp-content/uploads/2018/08/wall-art-2852231_960_720.jpg" 
+                                class="img-fluid" id="menu">
+                                <h4 style="text-align: center;padding-top:2%;">A.R.T</h4>
+                            </div>
+                        </div>
                 {% for category in categories %}
-                <h3 class="blink_us">{{category.name}}</h3>
-            {% endfor %}
-        </div>
-        <div class="row" style="margin-left:100px;margin-top:10px;">
-                {% for category in categories %}
-                <h3 class="blink_me">{{category.name}}</h3>
-            {% endfor %}
-        </div>
-        <div class="row" style="margin-left:400px;margin-top:10px;">
-                {% for category in categories %}
-                <h3 class="blink_us">{{category.name}}</h3>
-            {% endfor %}
-        </div>
-        <div class="row" style="margin-left:700px;margin-top:1%;">
-                {% for category in categories %}
-                <h3 class="blink_us">{{category.name}}</h3>
-            {% endfor %}
-        </div>
-        <div class="row" style="margin-left:400px;margin-top:2%;">
-                {% for category in categories %}
-                <h3 class="blink_us">{{category.name}}</h3>
-            {% endfor %}
-        </div>
-        <div class="row" style="margin-left:300px;margin-top:2%;">
-                {% for category in categories %}
-                <h3 class="blink_us">{{category.name}}</h3>
-            {% endfor %}
-        </div>
-        <div class="row" style="margin-left:200px;margin-top:4%">
-                {% for category in categories %}
-                <h3 class="blink_us">{{category.name}}</h3>
-            {% endfor %}
-        </div>
-        <div class="row" style="float:right;margin-top:1%;right:0;font-size:50px;color: #aa4684;">
-                    <div class="typewriter">Capture every moment.</div>
+                    <h1 class="blink_me">{{category.name}}</h1>
+                {% endfor %}
+                <div class="row" style="float:right;">
+                    {% for category in categories %}
+                        <h3 class="blink_me">{{category.name}}</h3>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-4">
+                    <div class="row" style="float:left;margin-top:100px;">
+                            {% for category in categories %}
+                            <h3 class="blink_us">{{category.name}}</h3>
+                        {% endfor %}
+                    </div>
+                    <div class="row" style="float:right;margin-top:1%;right:0;font-size:50px;color: #aa4684;">
+                        <div class="typewriter">Capture every moment.</div>
+                    </div>
+                    <div class="row" style="margin-left:100px;margin-top:10px;">
+                            {% for category in categories %}
+                            <h3 class="blink_me">{{category.name}}</h3>
+                        {% endfor %}
+                    </div>
+                    <div class = "row" style="float:left;">
+                            <div class="col-sm-3 col-md-6" id="polaroid2">
+                                <img src="https://media.allure.com/photos/5a7d17a7b6a76921fb1f9827/16:9/w_1280,c_limit/0318-allure-cover-lupita-nyongo.png" 
+                                class="img-fluid" id="menu">
+                                <h4 style="text-align: center;padding-top:2%;">African Queen</h4>
+                            </div>
+                            <div class="col-sm-3 col-md-6" id="polaroid2">
+                                <img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall.jpg" 
+                                class="img-fluid" id="menu">
+                                <h4 style="text-align: center;padding-top:2%;">Mother Nature</h4>
+                            </div>
+                        </div>
+                    <div class="row" style="margin-left:400px;margin-top:10px;">
+                            {% for category in categories %}
+                            <h3 class="blink_us">{{category.name}}</h3>
+                        {% endfor %}
+                    </div>
+                    <div class="row" style="margin-left:700px;margin-top:1%;">
+                            {% for category in categories %}
+                            <h3 class="blink_us">{{category.name}}</h3>
+                        {% endfor %}
+                    </div>
+            </div>
+            <div class="col-sm-3 col-md-4">
+                <div class = "row" style="float:right;">
+                    <div class="col-sm-3 col-md-6" id="polaroid2" class="overlay">
+                        <img src="https://dq1eylutsoz4u.cloudfront.net/2018/01/25162144/relationship-tips-happy-couples.jpg" 
+                        class="img-fluid" id="menu">
+                        <h4 style="text-align: center;padding-top:2%;">my heartbeat</h4>
+                    </div>
+                    <div class="col-sm-3 col-md-6" id="polaroid2">
+                        <img src="https://www.globalgiving.org/pfil/7532/pict_large.jpg" 
+                        class="img-fluid" id="menu">
+                        <h4 style="text-align: center;padding-top:2%;">Perfect innocence and beauty</h4>
+                    </div>
+                </div>
+            <div class="row" style="margin-left:400px;margin-top:2%;">
+                    {% for category in categories %}
+                    <h3 class="blink_us">{{category.name}}</h3>
+                {% endfor %}
+            </div>
+            <div class="row" style="margin-left:300px;margin-top:2%;">
+                    {% for category in categories %}
+                    <h3 class="blink_us">{{category.name}}</h3>
+                {% endfor %}
+            </div>
+            <div class="row" style="margin-left:200px;margin-top:4%">
+                    {% for category in categories %}
+                    <h3 class="blink_us">{{category.name}}</h3>
+                {% endfor %}
+            </div></div>
         </div>
     </div>
 </body>

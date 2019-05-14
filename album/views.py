@@ -15,6 +15,7 @@ def categories(request):
     return render(request, 'categories.html',{"categories":categories,"images":images,"locations":locations})
 
 def category(request):
+    locations = Location.objects.all()
     images = Image.objects.all()
     if 'category' in request.GET and request.GET["category"]:
         search_term = request.GET.get("category")
@@ -27,6 +28,8 @@ def category(request):
         return render(request, 'landingpage.html',{"message":message,"locations":locations})
 
 def location(request):
-    return render(request, 'location.html', {"locations":locations})
+    locations = Location.objects.all()
+    images = Image.objects.all()
+    return render(request, 'location.html', {"locations":locations,"images":images})
 
 
