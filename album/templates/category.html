@@ -13,16 +13,21 @@
         <div class="row">
             {% if category %}
             <h1 style="margin:1%;margin-left:35%;">Found category <span style="color:purple">{{message}}</span></h1>
-            <div class="container-fluid">
-                <div class="row">
+            <div class="container-fluid" style="display: flex;
+            flex-wrap: wrap;">
                     {% for image in images %}
                     {% if message == image.category.name %}
-                    <div class="col-sm-2 col-md-4">
-                    </div>
                     <div class="col-sm-6 col-md-4 col-xs-3" id="polaroid">
                         <img src="{{image.image.url}}" class="img-fluid" id="gallery" class="btn"
                             data-target="#{{image.name}}" data-toggle="modal">
-                        <h2 style="text-align:center;">{{image.name}}</h2>
+                            <div class="row" style="padding-top:1%;">
+                                    <div class="col-md-9">
+                                        <h2 style="text-align: center;">{{image.name}}</h2>
+                                    </div>
+                                    <div class="col-md-2">
+                                            <button class="btn" onclick="copyToClipboard('127.0.0.1:8000{{image.image.url}}')">copy link</button>
+                                    </div>
+                                </div>
                     </div>
                     {% endif %}
                     <div class="modal fade" id="{{image.name}}" tabindex="-1" role="dialog"
@@ -46,7 +51,6 @@
                         </div>
                     </div>
                     {% endfor %}
-                </div>
             </div>
             {% else %}
             <h2> Found 0 images for the category {{message}}</h2>
@@ -54,6 +58,15 @@
         </div>
     </div>
 </body>
-
+<script>
+        function copyToClipboard (str) {
+            const el = document.createElement('textarea');
+            el.value = str;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        };
+    </script>
 </html>
 {% endblock %}
