@@ -19,10 +19,10 @@ from decouple import config,Csv
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 MODE=config("MODE", default="dev")
+DEBUG = config('DEBUG')
 SECRET_KEY = config('SECRET_KEY')
 # development
 if config('MODE')=="dev":
-    DEBUG = True
     DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.postgresql_psycopg2',
